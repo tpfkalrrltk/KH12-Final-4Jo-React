@@ -1,4 +1,4 @@
-c:\Users\hwangMinHa\react\demo01\src\logo.svgimport { render, screen } from '@testing-library/react';
+{ render, screen }'@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {

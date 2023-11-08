@@ -14,8 +14,6 @@ function App() {
         <Route exact path="/" element={<Home />}></Route>
         <Route path="/league" element={<League />}></Route>
       </Routes>
-
-
     </div>
   );
 }
