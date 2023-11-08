@@ -1,13 +1,18 @@
 import logo from './images/logo.png';
-import {AiTwotoneBell} from "react-icons/ai";
+import { AiTwotoneBell } from "react-icons/ai";
+import { FaList } from "react-icons/fa";
+import {FiLogIn} from "react-icons/fi";
+import {SiAdobeindesign} from "react-icons/si";
+import {VscSignIn} from "react-icons/vsc";
+import {RiPassPendingLine} from "react-icons/ri";
 
-const Menu = () => {
+const Header = () => {
 
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg bg-primary fixed-top p-0" data-bs-theme="light">
         <div class="container-fluid col-9">
-          <a class="navbar-brand ms-4" href="#"><img src={logo} width="110px" height="100px" /></a>
+          <a class="navbar-brand ms-4" href="/"><img src={logo} width="110px" height="100px" /></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -26,27 +31,47 @@ const Menu = () => {
           </div>
         </div>
 
-        <div class="collapse navbar-collapse row" id="navbarColor02">
-          <ul class="navbar-nav me-auto col-8">
+        <div class="" >
+          <ul class="navbar-nav  row">
 
-          <li class="nav-item me-4">
-             <h3> <AiTwotoneBell  className='text-light' /></h3>
+
+
+            <li class="nav-item me-1  col-3  ">
+              <button type="button  " class=" btn btn-outline-primary text-light border-light mt-3"  ><h3><RiPassPendingLine /></h3></button>
             </li>
 
-            <li class="nav-item me-3 ">
-              <button type="button  " class=" btn btn-outline-primary text-light border-light"  >로그인</button>
+            <li class="nav-item me-1 col-3 ">
+              <button type="button " class=" btn btn-light text-primary mt-3"><h3><SiAdobeindesign/></h3></button>
             </li>
 
-            <li class="nav-item ">
-              <button type="button " class=" btn btn-light text-primary">회원가입</button>
+
+            <li class="nav-item dropdown col-5 ">
+              <a class="nav-link dropdown-toggle text-light mt-2 me-5 pe-5" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><h5><FaList /></h5></a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">모임 목록</a>
+                <a class="dropdown-item" href="#">리그 목록</a>
+                <a class="dropdown-item" href="#">여성 전용 모임</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">특별 기능</a>
+              </div>
             </li>
+
+
+
 
           </ul>
         </div>
+
+
+
+
+
+
+
 
       </nav>
 
     </>
   )
 }
-export default Menu;
+export default Header;
