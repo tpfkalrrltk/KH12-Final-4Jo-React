@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Menu from './components/Menu.js';
+import Header from './components/Header.js';
 
 function App() {
   return (
-    <div className='container-fluid my-5 py-5'>
-      <Menu />
+    <div className='container-fluid '>
+      <Header />
     </div>
   );
 }
