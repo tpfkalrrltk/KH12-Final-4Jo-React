@@ -6,6 +6,7 @@ function App() {
   return (
     <div className='container-fluid my-5 py-5'>
       <Menu />
+      
     </div>
   );
 }
