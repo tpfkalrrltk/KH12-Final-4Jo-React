@@ -1,0 +1,11 @@
+npm install bootstrap
+npm i bootswatch
+npm install react-router  //라우터 설치
+npm install react-router-dom
+npm install axios
+npm install lodash //스로틀링, debounce 기능  라이브러리
+
+
+실행 안될때
+npm install -save react-scripts
+npm install -g react-scripts
