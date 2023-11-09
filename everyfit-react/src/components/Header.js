@@ -6,6 +6,7 @@ import { SiAdobeindesign } from "react-icons/si";
 import { VscSignIn } from "react-icons/vsc";
 import { RiPassPendingLine } from "react-icons/ri";
 import { useMediaQuery } from 'react-responsive';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
 
@@ -18,7 +19,8 @@ const Header = () => {
 
     <nav className="navbar navbar-expand-lg bg-primary fixed-top p-0" data-bs-theme="dark">
       <div className="container-fluid col-9">
-        <a className="navbar-brand ms-4" href="/"><img src={logo} width="110px" height="100px" /></a>
+        <a className="navbar-brand ms-4">
+        <Link to="/"><img src={logo} width="110px" height="100px" /></Link></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -53,7 +55,14 @@ const Header = () => {
             <a className="nav-link dropdown-toggle text-light mt-2 me-5 pe-5" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><h5><FaList /></h5></a>
             <div className="dropdown-menu bg-primary ">
               <a className="dropdown-item text-light" href="#">모임 목록</a>
-              <a className="dropdown-item text-light" href="#">리그 목록</a>
+              <NavLink        
+              style={({ isActive }) => ({ color: isActive ? 'burlywood' : 'white' })}
+              className= "dropdown-item" to="/moim">리그 목록</NavLink>
+
+              <NavLink        
+              style={({ isActive }) => ({ color: isActive ? 'burlywood' : 'white' })}
+              className= "dropdown-item" to="/freeBoard">자유 게시판</NavLink>
+
               <a className="dropdown-item text-light" href="#">여성 전용 모임</a>
               <div className="dropdown-divider"></div>
               <a className="dropdown-item text-light" href="#">특별 기능</a>
@@ -96,9 +105,23 @@ const Header = () => {
 
                 </div>
               </div>
-              <a className="dropdown-item text-light" href="#">모임 목록</a>
-              <a className="dropdown-item text-light" href="#">리그 목록</a>
-              <a className="dropdown-item text-light" href="#">여성 전용 모임</a>
+              <NavLink className=
+                // eslint-disable-next-line no-restricted-globals
+                {`nav-link ${location.pathname === '/freeBoard' ? 'active' : ''}`}
+                to="/freeBoard">모임 만들기</NavLink>
+                
+              <NavLink className=
+                // eslint-disable-next-line no-restricted-globals
+                {`nav-link ${location.pathname === '/freeBoard' ? 'active' : ''}`}
+                to="/freeBoard">리그 목록</NavLink>
+
+              <NavLink className=
+                // eslint-disable-next-line no-restricted-globals
+                {`nav-link ${location.pathname === '/freeBoard' ? 'active' : ''}`}
+                to="/freeBoard">자유게시판</NavLink>
+
+
+              <a className="dropdown-item text-light" href="#">여성 전용1 모임</a>
               <div className="dropdown-divider"></div>
               <a className="dropdown-item text-light" href="#">특별 기능</a>
 
