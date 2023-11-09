@@ -6,6 +6,7 @@ import Footer from './components/Footer.js';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import League from './components/League';
 import Home from './components/Home.js';
+import LeagueList from './components/LeagueList.js';
 
 
 
@@ -19,8 +20,9 @@ function App() {
       <div className='row'>
         <div className='col-md-8 offset-md-2'>
           <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-        <Route path="/league" element={<League />}></Route>
+            <Route exact path="/" element={<Home />}></Route>
+            <Route path="/league" element={<League />}></Route>
+            <Route path="/leagueList" element={<LeagueList />}></Route>
           </Routes>
         </div>
       </div>

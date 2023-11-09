@@ -6,6 +6,7 @@ import { SiAdobeindesign } from "react-icons/si";
 import { VscSignIn } from "react-icons/vsc";
 import { RiPassPendingLine } from "react-icons/ri";
 import { useMediaQuery } from 'react-responsive';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 
@@ -53,8 +54,8 @@ const Header = () => {
             <a class="nav-link dropdown-toggle text-light mt-2 me-5 pe-5" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><h5><FaList /></h5></a>
             <div class="dropdown-menu bg-primary ">
               <a class="dropdown-item text-light" href="#">모임 목록</a>
-              <a class="dropdown-item text-light" href="#">리그 목록</a>
-              <a class="dropdown-item text-light" href="#">여성 전용 모임</a>
+              <NavLink class="nav-link dropdown-item text-light" to="/leagueList">리그 목록</NavLink>
+              <a class="dropdown-item text-light" to="#">여성 전용 모임</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item text-light" href="#">특별 기능</a>
             </div>
