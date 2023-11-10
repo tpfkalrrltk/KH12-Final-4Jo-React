@@ -6,7 +6,9 @@ import { SiAdobeindesign } from "react-icons/si";
 import { VscSignIn } from "react-icons/vsc";
 import { RiPassPendingLine } from "react-icons/ri";
 import { useMediaQuery } from 'react-responsive';
+import { NavLink } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
+
 
 const Header = () => {
 
@@ -50,14 +52,13 @@ const Header = () => {
             <button type="button " className=" btn btn-light text-primary mt-3"><h3><SiAdobeindesign /></h3></button>
           </li>
 
-
           <li className="nav-item dropdown col-5 ">
             <a className="nav-link dropdown-toggle text-light mt-2 me-5 pe-5" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><h5><FaList /></h5></a>
             <div className="dropdown-menu bg-primary ">
               <a className="dropdown-item text-light" href="#">모임 목록</a>
               <NavLink        
               style={({ isActive }) => ({ color: isActive ? 'burlywood' : 'white' })}
-              className= "dropdown-item" to="/moim">리그 목록</NavLink>
+              className= "dropdown-item" to="/leagueList">리그 목록</NavLink>
 
               <NavLink        
               style={({ isActive }) => ({ color: isActive ? 'burlywood' : 'white' })}
