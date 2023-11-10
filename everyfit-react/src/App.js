@@ -9,6 +9,7 @@ import Home from './components/Home.js';
 import LeagueList from './components/LeagueList.js';
 import FreeBoard from './components/FreeBoard.js';
 import FreeBoardDetail from './components/FreeBoardDetail.js';
+import LeagueInsert from './components/LeagueInsert.js';
 
 
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/freeBoardDetail' element={<FreeBoardDetail />}>자유게시판 상세</Route>
             <Route path="/league" element={<League />}></Route>
             <Route path="/leagueList" element={<LeagueList />}></Route>
+            <Route path="/leagueInsert" element={<LeagueInsert />}></Route>
           </Routes>
         </div>
       </div>
