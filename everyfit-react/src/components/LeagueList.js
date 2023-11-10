@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 const LeagueList = (props) => {
 
@@ -55,6 +56,7 @@ const LeagueList = (props) => {
     <>
       <div className="row mt-4"><div className="col">
         <h1>리그 목록</h1>
+        <NavLink to="/leagueInsert" className="btn btn-primary">리그 등록</NavLink>
       </div></div>
 
       <div className="row mt-4"><div className="col">

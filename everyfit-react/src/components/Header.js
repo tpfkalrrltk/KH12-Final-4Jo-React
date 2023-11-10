@@ -6,7 +6,6 @@ import { SiAdobeindesign } from "react-icons/si";
 import { VscSignIn } from "react-icons/vsc";
 import { RiPassPendingLine } from "react-icons/ri";
 import { useMediaQuery } from 'react-responsive';
-import { NavLink } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
 
 
